@@ -12,30 +12,58 @@
 
 body {
     padding: 1rem;
+    background: white url("/assets/bg.png") repeat center top;
+    height: 100vh;
 }
 
 main {
-    min-height: 100vh;
+    height: 100%;
     display: grid;
     place-items: stretch;
 }
 
+header {
+    padding-bottom: 2rem;
+}
+
 #quote-container {
-    background-color: white;
     display: grid;
-    grid-template-rows: auto 20rem;
+    grid-template-rows: auto 1fr;
     place-items: center;
+    gap: 3rem;
+}
+
+#refresh-button {
+    align-self: end;
 }
 
 #kanye-quote {
     background-color: #001F3F;
     color: white;
+    align-self: start;
+}
+
+#kanye-site-link {
+    place-self: center;
+}
+
+.sticker {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.sticker-img {
+    background-image: url("../assets/kanye_logo.png");
+    background-size: contain;
 }
 
 
 /* Neumorphic button */
 
 #refresh-button {
+    cursor: pointer;
+    border: none;
     background: #F2F2F2;
     width: 4rem;
     height: 4rem;
@@ -45,8 +73,10 @@ main {
     font-family: 'Open Sans', sans-serif;
     font-size: 22px;
     box-shadow: inset 0 0 15px rgba(66, 66, 66, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(58, 58, 58, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
-    transition: box-shadow 399ms ease-in-out;
     &:hover {
+        color: #1da1f2;
+    }
+    &:active {
         box-shadow: inset 7px 7px 15px rgba(66, 66, 66, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
         color: #676767;
     }
