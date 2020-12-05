@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
 /* Reset */
 
 * {
@@ -7,17 +10,16 @@
     list-style: none;
 }
 
-
-/* Layout */
-
 body {
     padding: 1rem;
     background: white url("/assets/bg.png") repeat center top;
     height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 main {
-    height: 100%;
+    place-self: stretch;
     display: grid;
     place-items: stretch;
 }
@@ -48,8 +50,8 @@ header {
 }
 
 .sticker {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
 }
 
@@ -84,3 +86,13 @@ header {
 
 
 /* Fonts */
+
+header {
+    font-family: 'Rubik', sans-serif;
+    font-size: xx-large;
+}
+
+#kanye-quote {
+    font-family: 'Karla', sans-serif;
+    font-size: large;
+}
